@@ -1,6 +1,8 @@
 package com.example.examenandroid_sergipoza.Models;
 
-public class Esdeveniment {
+import java.io.Serializable;
+
+public class Esdeveniment implements Serializable {
 
     private String nombre,organizador,sala,precio,aforo,descripcion,fecha,lugar;
 

@@ -1,5 +1,6 @@
 package com.example.examenandroid_sergipoza;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ public class EsdevenimentsRV extends RecyclerView.Adapter<EsdevenimentsRV.esdeve
 
     public EsdevenimentsRV(ArrayList<Esdeveniment> listaEsdev, NavController mc) {
         this.listaEsdev = listaEsdev;
-        this.nc = nc;
+        this.nc = mc;
     }
 
     @Override
@@ -55,6 +56,15 @@ public class EsdevenimentsRV extends RecyclerView.Adapter<EsdevenimentsRV.esdeve
             nombre = itemView.findViewById(R.id.nombreEvento);
             fecha = itemView.findViewById(R.id.nombreFecha);
             lugar = itemView.findViewById(R.id.nombreLugar);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Bundle b = new Bundle();
+                    b.putSerializable("Esd",listaEsdev.get(getAdapterPosition()));
+                    nc.navigate(R.id.nav_slideshow,b);
+                }
+            });
 
 
         }

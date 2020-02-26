@@ -2,6 +2,10 @@ package com.example.examenandroid_sergipoza.Repository;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.example.examenandroid_sergipoza.Models.Assistent;
+import com.example.examenandroid_sergipoza.RoomConnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,6 +31,17 @@ public class Repository {
             srepository = new Repository(context);
         }
         return srepository;
+    }
+
+    public static void insertarAsistente(Assistent e){
+        RoomConnection rc = RoomConnection.getRoomConnection(c);
+
+        rc.assitentDao().insertAssistent(e);
+
+        Toast.makeText(c,"Insertado",Toast.LENGTH_SHORT).show();
+
+        rc.destroyRoomConnection();
+        rc.close();
     }
 
     private static Connection connection = null;

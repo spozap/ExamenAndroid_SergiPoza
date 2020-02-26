@@ -13,21 +13,21 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.examenandroid_sergipoza.ui.gallery.GalleryFragment"
+        android:name="com.example.examenandroid_sergipoza.ui.listaAsistentes.listaAsistentesFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/lista_asistentes" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.examenandroid_sergipoza.ui.detallEsdev.detallEsdevFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/detall_esdev" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.examenandroid_sergipoza.ui.tools.ToolsFragment"
+        android:name="com.example.examenandroid_sergipoza.ui.asistir.asistirFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/asistir" />
 
     <fragment
         android:id="@+id/nav_share"
