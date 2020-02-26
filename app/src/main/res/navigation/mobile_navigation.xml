@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.examenandroid_sergipoza.ui.slideshow.SlideshowFragment"
+        android:name="com.example.examenandroid_sergipoza.ui.detallEsdev.detallEsdevFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.examenandroid_sergipoza.ui.share.ShareFragment"
+        android:name="com.example.examenandroid_sergipoza.ui.nouEsdev.nouEsdevFragment"
         android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/nou_esdev" />
 
     <fragment
         android:id="@+id/nav_send"
