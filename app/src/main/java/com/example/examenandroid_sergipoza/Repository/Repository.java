@@ -10,6 +10,7 @@ import com.example.examenandroid_sergipoza.RoomConnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 public class Repository {
 
@@ -42,6 +43,17 @@ public class Repository {
 
         rc.destroyRoomConnection();
         rc.close();
+    }
+
+    public static List<Assistent> getAsistentes(){
+        RoomConnection rc = RoomConnection.getRoomConnection(c);
+
+        List<Assistent> asistentes = rc.assitentDao().getAssistents();
+
+        rc.destroyRoomConnection();
+        rc.close();
+
+        return asistentes;
     }
 
     private static Connection connection = null;

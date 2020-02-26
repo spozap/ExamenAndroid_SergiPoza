@@ -7,9 +7,11 @@ import androidx.lifecycle.ViewModel;
 import com.example.examenandroid_sergipoza.Models.Assistent;
 import com.example.examenandroid_sergipoza.Repository.Repository;
 
+import java.util.List;
+
 public class listaAsistentesViewModel extends ViewModel {
 
-    public void insertarAsistente(Assistent e){
-        Repository.insertarAsistente(e);
+    public List<Assistent> getAsistentes(){
+        return Repository.getAsistentes();
     }
 }

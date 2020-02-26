@@ -11,9 +11,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.examenandroid_sergipoza.AsistentesRV;
+import com.example.examenandroid_sergipoza.Models.Assistent;
 import com.example.examenandroid_sergipoza.R;
+
+import java.util.List;
 
 public class listaAsistentesFragment extends Fragment {
 
@@ -28,6 +33,13 @@ public class listaAsistentesFragment extends Fragment {
 
         asistir = root.findViewById(R.id.asistirBtn);
         rvAsistentes = root.findViewById(R.id.listaAsistentes);
+
+        rvAsistentes.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        List<Assistent> lista = listaAsistentesViewModel.getAsistentes();
+
+        AsistentesRV asrv = new AsistentesRV(lista);
+        rvAsistentes.setAdapter(asrv);
 
         asistir.setOnClickListener(new View.OnClickListener() {
             @Override

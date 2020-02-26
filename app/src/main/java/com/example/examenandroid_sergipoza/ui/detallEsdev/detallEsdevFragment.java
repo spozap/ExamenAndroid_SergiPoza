@@ -40,7 +40,7 @@ public class detallEsdevFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 NavController nc = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
-                nc.navigate(R.id.nav_tools);
+                nc.navigate(R.id.nav_gallery);
             }
         });
 
