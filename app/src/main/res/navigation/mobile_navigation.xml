@@ -40,4 +40,11 @@
         android:name="com.example.examenandroid_sergipoza.ui.listaEsdev.listaEsdevFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/lista_esdev" />
+
+    <fragment
+        android:id="@+id/nav_edit_esd"
+        android:name="com.example.examenandroid_sergipoza.ui.editEsdev.editEsdevFragment"
+        android:label="Editar"
+        tools:layout="@layout/edit_esdev"/>
+
 </navigation>

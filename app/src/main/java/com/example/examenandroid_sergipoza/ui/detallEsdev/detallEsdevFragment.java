@@ -32,6 +32,8 @@ public class detallEsdevFragment extends Fragment {
                 ViewModelProviders.of(this).get(detallEsdevViewModel.class);
         View root = inflater.inflate(R.layout.detall_esdev, container, false);
 
+        Esdeveniment e = (Esdeveniment) getArguments().getSerializable("Esd");
+
         mensajes = root.findViewById(R.id.mensajesImageButton);
         asistentes = root.findViewById(R.id.asistentesImageButton);
         edit = root.findViewById(R.id.editImageButton);
@@ -44,7 +46,14 @@ public class detallEsdevFragment extends Fragment {
             }
         });
 
-        Esdeveniment e = (Esdeveniment) getArguments().getSerializable("Esd");
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController nc = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
+                nc.navigate(R.id.nav_edit_esd);
+            }
+        });
+
 
         return root;
     }
